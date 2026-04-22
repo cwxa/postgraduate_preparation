@@ -13,7 +13,7 @@
 | 天数 | 学习内容 | 实践任务 | 推荐资源 |
 |------|----------|----------|----------|
 | 1 | 大O表示法，递归与迭代复杂度分析 | 分析斐波那契数列的多种实现复杂度 | [Big-O Cheat Sheet](https://www.bigocheatsheet.com/) |
-| 2 | 分治法：归并排序、快速排序 | 实现归并排序并绘制递归树 | 《算法图解》第4章 |
+| 2 | 分治法：归并排序、快速排序 | 实现归并排序并绘制递归树 |[排序演示](https://visualgo.net/zh) |
 | 3 | 动态规划：背包问题 | 实现0-1背包问题（DP表） | [背包问题详解](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/) |
 | 4 | 动态规划：最短路径（Floyd-Warshall） | 实现Floyd算法，输出任意两点最短路径 | [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm) |
 | 5 | 阶段复习与小测验 | 写一个函数判断任意代码的时间复杂度；整理笔记 | 自测题：LeetCode 53（最大子序和，动态规划） |
