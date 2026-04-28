@@ -1,2 +1,3 @@
 tsp/__pycache__
 *.pyc
+*.log
