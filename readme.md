@@ -47,13 +47,13 @@
 | 1 | TSP问题定义，暴力搜索（n≤10） | 实现全排列枚举TSP | 使用 `itertools.permutations` |
 | 2 | 最近邻贪心算法 | 实现贪心TSP，分析不足 | 对比最优解（小规模） |
 | 3 | 动态规划（Held-Karp） | 实现O(n²·2ⁿ)的DP求解TSP | [Held-Karp算法](https://en.wikipedia.org/wiki/Held-Karp_algorithm) |
-| 4 | 模拟退火（SA）原理 | 实现SA求解TSP，设计邻域结构（2-opt） | [模拟退火TSP教程](https://towardsdatascience.com/simulated-annealing-for-tsp-7c7d0b6b5f6c) |
+| 4 | 模拟退火（SA）原理 | 实现SA求解TSP，设计邻域结构（2-opt） | [模拟退火TSP教程](https://cloud.tencent.com/developer/article/2371909) |
 | 5 | SA参数调优（温度衰减、马尔可夫链长） | 绘制收敛曲线，找最佳参数 | 可视化：`matplotlib` 绘制距离随迭代变化 |
 | 6 | 对比多种算法效果（小规模标准库TSPLIB） | 使用 `tsplib95` 加载 `berlin52` 等实例 | [TSPLIB数据集](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/) |
 
 **✅ 阶段成果**：  
-- 代码 `tsp_solvers.py` 包含暴力、贪心、DP、SA  
-- 报告对比各算法在 `berlin52` 上的解质量与时间
+- 代码 `tsp.py` 包含暴力、贪心、SA、2-opt等算法与算法组合  
+- 报告对比各算法在不同规模数据上的解质量与时间
 
 ---
 
