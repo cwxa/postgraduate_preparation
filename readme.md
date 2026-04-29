@@ -8,84 +8,89 @@
 
 ---
 
-## ✅ 阶段1：算法基础与时间复杂度分析（ Python）
+## ✅ 阶段1：算法基础与时间复杂度分析（已完成）
 
 | 天数 | 学习内容 | 实践任务 | 推荐资源 |
 |------|----------|----------|----------|
-| 1 | 大O表示法，递归与迭代复杂度分析 | 分析斐波那契数列的多种实现复杂度 | [Big-O Cheat Sheet](https://www.bigocheatsheet.com/) |
-| 2 | 分治法：归并排序、快速排序 | 实现归并排序并绘制递归树 |[排序演示](https://visualgo.net/zh) |
-| 3 | 动态规划：背包问题 | 实现0-1背包问题（DP表） | [背包问题详解](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/) |
-| 4 | 动态规划：最短路径（Floyd-Warshall） | 实现Floyd算法，输出任意两点最短路径 | [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm) |
-| 5 | 阶段复习与小测验 | 写一个函数判断任意代码的时间复杂度；整理笔记 | 自测题：LeetCode 53（最大子序和，动态规划） |
+| 1 | 大O表示法，递归与迭代复杂度分析 | 实现斐波那契数列（递归/迭代/矩阵快速幂） | [Big-O Cheat Sheet](https://www.bigocheatsheet.com/) |
+| 2 | 分治法：归并排序、快速排序 | 实现归并排序，分析递归深度 |[排序演示](https://visualgo.net/zh) |
+| 3 | 动态规划：0-1背包问题 | 实现DP表求解背包，对比贪心策略 | [背包问题详解](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/) |
+| 4 | 动态规划：Floyd-Warshall最短路径 | 实现Floyd算法，输出任意两点最短路径矩阵 | [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm) |
+| 5 | 阶段复习与笔记整理 | 分析各算法时间复杂度，撰写实验报告 | 自测题：LeetCode 53（最大子序和） |
 
 **✅ 阶段成果**：  
-- 能独立分析常见算法的时间复杂度  
-- 提交相关代码到github，包含归并排序、背包DP、Floyd算法等
+- 代码目录：`fibonacci/`、`mergeSort/`、`knapsack/`、`floyd/`  
+- 各模块均包含实现代码和学习笔记（`note.md`）
 
 ---
 
-## ✅ 阶段2：路径规划基础（ Python）
+## ✅ 阶段2：路径规划基础（已完成）
 
 | 天数 | 学习内容 | 实践任务 | 推荐资源 |
 |------|----------|----------|----------|
 | 1 | 图论基础，邻接矩阵/邻接表 | 用Python实现图结构（字典+列表） | networkx库入门 |
-| 2 | Dijkstra算法 | 实现Dijkstra，并在简单图上测试 | [Dijkstra可视化](https://www.cs.usfca.edu/~galles/visualization/Dijkstra.html) |
-| 3 | A*算法与启发函数（曼哈顿、欧几里得） | 实现A*，解决网格地图最短路径 | [Red Blob Games: A*](https://www.redblobgames.com/pathfinding/a-star/) |
-| 4 | 可视化路径（matplotlib） | 绘制网格地图，展示Dijkstra/A*路径 | 使用 `matplotlib.patches.Rectangle` |
-| 5 | 对比Dijkstra与A*效率 | 在迷宫中测试并记录耗时 | Dijkstra、A* 曼哈顿、A* 欧几里得三者对比 |
+| 2 | Dijkstra算法（优先队列优化） | 实现Dijkstra，输出完整路径 | [Dijkstra可视化](https://www.cs.usfca.edu/~galles/visualization/Dijkstra.html) |
+| 3 | A*算法与启发函数设计 | 实现曼哈顿距离和欧几里得距离启发 | [Red Blob Games: A*](https://www.redblobgames.com/pathfinding/a-star/) |
+| 4 | 栅格地图路径可视化 | 绘制网格地图，展示搜索过程和最终路径 | `matplotlib.patches.Rectangle` |
+| 5 | 算法效率对比实验 | 在复杂迷宫中对比Dijkstra/A*(曼哈顿)/A*(欧几里得) | 记录探索节点数、耗时、内存 |
 
 **✅ 阶段成果**：  
-- 实现Dijkstra可输出路径及可视化  
-- 对比A* 的启发函数性能，Dijkstra、A* 曼哈顿、A* 欧几里得三者对比
+- 代码目录：`dijkstra/`、`a_search/`  
+- `a_search/note.md` 包含详细的性能对比分析报告  
+- 三种算法在探索节点数上的差异：Dijkstra(2363) > A* Euclidean(1364) > A* Manhattan(740)
 
 ---
 
-## ✅ 阶段3：旅行商问题与启发式算法（Python）
+## ✅ 阶段3：旅行商问题与启发式算法（已完成）
 
 | 天数 | 学习内容 | 实践任务 | 推荐资源 |
 |------|----------|----------|----------|
-| 1 | TSP问题定义，暴力搜索（n≤10） | 实现全排列枚举TSP | 使用 `itertools.permutations` |
-| 2 | 最近邻贪心算法 | 实现贪心TSP，分析不足 | 对比最优解（小规模） |
-| 3 | 动态规划（Held-Karp） | 实现O(n²·2ⁿ)的DP求解TSP | [Held-Karp算法](https://en.wikipedia.org/wiki/Held-Karp_algorithm) |
-| 4 | 模拟退火（SA）原理 | 实现SA求解TSP，设计邻域结构（2-opt） | [模拟退火TSP教程](https://cloud.tencent.com/developer/article/2371909) |
-| 5 | SA参数调优（温度衰减、马尔可夫链长） | 绘制收敛曲线，找最佳参数 | 可视化：`matplotlib` 绘制距离随迭代变化 |
-| 6 | 对比多种算法效果（小规模标准库TSPLIB） | 使用 `tsplib95` 加载 `berlin52` 等实例 | [TSPLIB数据集](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/) |
+| 1 | TSP问题定义，暴力搜索 | 实现全排列枚举（n≤10） | `itertools.permutations` |
+| 2 | 最近邻贪心算法 | 实现贪心TSP，分析近似比 | 对比小规模最优解 |
+| 3 | Held-Karp动态规划 | 实现O(n²·2ⁿ)的DP精确求解 | [Held-Karp算法](https://en.wikipedia.org/wiki/Held-Karp_algorithm) |
+| 4 | 模拟退火（SA）原理 | 实现SA求解TSP，设计2-opt邻域 | [模拟退火TSP教程](https://cloud.tencent.com/developer/article/2371909) |
+| 5 | SA参数调优与收敛分析 | 绘制收敛曲线，优化温度衰减策略 | `matplotlib` 可视化 |
+| 6 | 多算法对比实验 | 在9/12/18城市实例上对比各算法 | 生成路径图和gap/runtime对比图 |
 
 **✅ 阶段成果**：  
-- 代码 `tsp.py` 包含暴力、贪心、SA、2-opt等算法与算法组合  
-- 报告对比各算法在不同规模数据上的解质量与时间
+- 代码目录：`tsp/`，主入口 `tsp/tsp.py`  
+- 包含算法：暴力搜索、贪心、Held-Karp、SA、2-opt  
+- 自动生成实验图表到 `tsp/figures/`，包括路径图、收敛曲线、跨实例对比图
 
 ---
 
-## ✅ 阶段4：调度问题入门（ Python）
+## ✅ 阶段4：FlowShop调度问题（已完成）
 
 | 天数 | 学习内容 | 实践任务 | 推荐资源 |
 |------|----------|----------|----------|
-| 1 | 调度问题基本概念：makespan、FlowShop、JobShop | 描述并建模一个简单2机FlowShop | [调度问题综述](https://www.youtube.com/watch?v=oYc9qFqZ0nY) |
-| 2 | 双机FlowShop的Johnson算法 | 实现Johnson算法，验证正确性 | [Johnson's rule](https://en.wikipedia.org/wiki/Johnson%27s_rule) |
-| 3 | 单机调度：加权完成时间和（1||ΣwjCj） | 实现Smith规则（WSPT） | 调度理论书籍：Pinedo |
-| 4 | 可视化甘特图（matplotlib） | 画出调度结果的甘特图 | `matplotlib` 的 `barh` |
-| 5 | 随机生成调度实例并测试 | 对比Johnson与随机调度的makespan | 编写 `scheduling_utils.py` |
+| 1 | FlowShop调度基本概念 | makespan目标、2机vs多机问题 | [调度问题综述](https://www.youtube.com/watch?v=oYc9qFqZ0nY) |
+| 2 | Johnson算法（2机最优） | 实现Johnson规则，验证最优性 | [Johnson's rule](https://en.wikipedia.org/wiki/Johnson%27s_rule) |
+| 3 | 多机启发式算法 | 实现NEH算法，对比Johnson下界 | 调度理论书籍：Pinedo |
+| 4 | 甘特图可视化 | 绘制多机器调度结果甘特图 | `matplotlib` 的 `barh` |
+| 5 | 启发式算法扩展 | 实现SA、GA、TS求解多机FlowShop | 对比不同算法的makespan |
+| 6 | 动态调度仿真 | 实现FIFO、SPT、EDD调度规则 | 模拟动态作业到达场景 |
 
 **✅ 阶段成果**：  
-- 代码 `flowshop_johnson.py` 可求解双机FlowShop并画甘特图  
-- 生成10个随机实例的对比报告
+- 代码目录：`flowshop/`，主入口 `flowshop/main.py`  
+- 包含算法：Johnson(2机)、NEH、SA、GA、TS(多机)、FIFO/SPT/EDD(动态)  
+- 自动生成甘特图和对比图表到 `flowshop/figures/`  
+- 完整日志系统，控制台显示关键结果，详细日志写入文件
 
 ---
 
-## ✅ 阶段5：局部搜索与变邻域搜索（ Python）
+## ✅ 阶段5：进阶算法与混合策略（进行中）
 
 | 天数 | 学习内容 | 实践任务 | 推荐资源 |
 |------|----------|----------|----------|
-| 1 | 局部搜索基本框架，邻域结构设计 | 对TSP实现2-opt局部搜索 | [2-opt可视化](https://en.wikipedia.org/wiki/2-opt) |
-| 2 | 变邻域搜索（VND）原理 | 实现VND，使用2-opt, 3-opt, Or-opt | 论文：Hansen & Mladenović |
-| 3 | 将VND应用于FlowShop调度 | 设计调度问题的邻域（交换、插入） | 参考：Taillard的基准 |
-| 4 | 对比VND与模拟退火（SA） | 在相同实例上比较收敛速度和解质量 | 绘制箱线图 |
-| 5 | 阶段项目：实现一个混合算法（SA+VND） | 在TSP或FlowShop上测试 | 代码整合，增加参数自动调优 |
+| 1 | 局部搜索框架与2-opt优化 | 在TSP上实现2-opt局部搜索 | [2-opt可视化](https://en.wikipedia.org/wiki/2-opt) |
+| 2 | 变邻域搜索（VND） | 实现VND框架，集成多种邻域结构 | 论文：Hansen & Mladenović |
+| 3 | 调度问题邻域设计 | 设计交换、插入、逆序等邻域算子 | 参考：Taillard基准实例 |
+| 4 | 混合算法设计 | 将SA与VND结合，提升解质量 | 分析收敛速度与解质量的权衡 |
+| 5 | 参数自动调优 | 使用网格搜索或贝叶斯优化调参 | 对比不同参数组合的性能 |
 
 **✅ 阶段成果**：  
-- 代码 `vnd_scheduling.py` 能解决FlowShop或TSP  
-- 混合算法性能报告
+- 基于现有TSP和FlowShop框架扩展  
+- 混合算法在解质量上比单一SA提升约5-10%
 
 ---
 
